@@ -209,9 +209,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         a.href = url;
 
 
-                        // update：MyReplay.SC2Replay -> MyReplay-20251201-FIXED.SC2Replay add:timestamp
+                        // update：MyReplay.SC2Replay -> MyReplay-20251201-.SC2Replay add:timestamp
                         const originalFileName = file.name.replace(/\.SC2Replay$/i, ''); 
-                        const newFileName = `${originalFileName}-${dateStr}-FIXED.SC2Replay`;
+                        const newFileName = `${dateStr}${originalFileName}.SC2Replay`;
                         
                         a.download = newFileName;
                         
