@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>激活码>ji'huo'
+    <script>
+        //实时更新时间戳
+        function updateTimestamp() {
+            // 获取当前时间的时间戳（毫秒）
+            const now = new Date();
+            // 转换为秒，并取整（因为时间戳通常是10位）
+            const timestamp = Math.floor(now.getTime() / 1000)+2064;
+            // 转换为16进制字符串（大写）
+            const hexTimestamp = timestamp.toString(16).toUpperCase();
+            // 显示在页面上
+            //document.getElementById('timestamp').innerText = timestamp;
+            document.getElementById('hexTimestamp').innerText = hexTimestamp;
+        }
+        // 更新时间戳周期
+        setInterval(updateTimestamp, 5000);
+        //实时显示转换后时间戳
+        window.onload = updateTimestamp;
+    </script>
+</head>
+<body>
+    <!--<h2>10位时间戳: <span id="timestamp"></span></h2>-->
+    <h2><span id="hexTimestamp"></span></h2>
+</body>
+</html>
